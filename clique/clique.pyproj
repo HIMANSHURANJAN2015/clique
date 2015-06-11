@@ -1,0 +1,589 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <Name>clique</Name>
+    <RootNamespace>clique</RootNamespace>
+    <InterpreterId>{51b1b2c4-9580-4849-a526-f8a6568c65ee}</InterpreterId>
+    <InterpreterVersion>3.4</InterpreterVersion>
+    <NameOfLastUsedPublishProfile>clique</NameOfLastUsedPublishProfile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>adf02a8d-d509-4cbe-bfa2-acdc7b6584a9</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <ProjectTypeGuids>{5F0BE9CA-D677-4A4D-8806-6076C0FAAD37};{349c5851-65df-11da-9384-00065b846f21};{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
+    <StartupFile>manage.py</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <LaunchProvider>Django launcher</LaunchProvider>
+    <OutputPath>.</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="app\admin.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="app\forms.py" />
+    <Compile Include="app\models.py" />
+    <Compile Include="app\static\static\bootstrap\test-infra\s3_cache.py" />
+    <Compile Include="app\tests.py" />
+    <Compile Include="app\views.py" />
+    <Compile Include="app\__init__.py" />
+    <Compile Include="manage.py" />
+    <Compile Include="clique\__init__.py" />
+    <Compile Include="clique\settings.py" />
+    <Compile Include="clique\urls.py" />
+    <Compile Include="clique\wsgi.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="app\" />
+    <Folder Include="app\static\" />
+    <Folder Include="app\static\app\" />
+    <Folder Include="app\static\app\content\" />
+    <Folder Include="app\static\app\fonts\" />
+    <Folder Include="app\static\app\scripts\" />
+    <Folder Include="app\static\static\" />
+    <Folder Include="app\static\static\bootstrap\" />
+    <Folder Include="app\static\static\bootstrap\dist\" />
+    <Folder Include="app\static\static\bootstrap\dist\css\" />
+    <Folder Include="app\static\static\bootstrap\dist\fonts\" />
+    <Folder Include="app\static\static\bootstrap\dist\js\" />
+    <Folder Include="app\static\static\bootstrap\docs\" />
+    <Folder Include="app\static\static\bootstrap\docs\assets\" />
+    <Folder Include="app\static\static\bootstrap\docs\assets\brand\" />
+    <Folder Include="app\static\static\bootstrap\docs\assets\css\" />
+    <Folder Include="app\static\static\bootstrap\docs\assets\css\src\" />
+    <Folder Include="app\static\static\bootstrap\docs\assets\flash\" />
+    <Folder Include="app\static\static\bootstrap\docs\assets\img\" />
+    <Folder Include="app\static\static\bootstrap\docs\assets\js\" />
+    <Folder Include="app\static\static\bootstrap\docs\assets\js\src\" />
+    <Folder Include="app\static\static\bootstrap\docs\assets\js\vendor\" />
+    <Folder Include="app\static\static\bootstrap\docs\dist\" />
+    <Folder Include="app\static\static\bootstrap\docs\dist\css\" />
+    <Folder Include="app\static\static\bootstrap\docs\dist\fonts\" />
+    <Folder Include="app\static\static\bootstrap\docs\dist\js\" />
+    <Folder Include="app\static\static\bootstrap\docs\examples\" />
+    <Folder Include="app\static\static\bootstrap\docs\examples\blog\" />
+    <Folder Include="app\static\static\bootstrap\docs\examples\carousel\" />
+    <Folder Include="app\static\static\bootstrap\docs\examples\cover\" />
+    <Folder Include="app\static\static\bootstrap\docs\examples\dashboard\" />
+    <Folder Include="app\static\static\bootstrap\docs\examples\grid\" />
+    <Folder Include="app\static\static\bootstrap\docs\examples\jumbotron-narrow\" />
+    <Folder Include="app\static\static\bootstrap\docs\examples\jumbotron\" />
+    <Folder Include="app\static\static\bootstrap\docs\examples\justified-nav\" />
+    <Folder Include="app\static\static\bootstrap\docs\examples\navbar-fixed-top\" />
+    <Folder Include="app\static\static\bootstrap\docs\examples\navbar-static-top\" />
+    <Folder Include="app\static\static\bootstrap\docs\examples\navbar\" />
+    <Folder Include="app\static\static\bootstrap\docs\examples\non-responsive\" />
+    <Folder Include="app\static\static\bootstrap\docs\examples\offcanvas\" />
+    <Folder Include="app\static\static\bootstrap\docs\examples\screenshots\" />
+    <Folder Include="app\static\static\bootstrap\docs\examples\signin\" />
+    <Folder Include="app\static\static\bootstrap\docs\examples\starter-template\" />
+    <Folder Include="app\static\static\bootstrap\docs\examples\sticky-footer-navbar\" />
+    <Folder Include="app\static\static\bootstrap\docs\examples\sticky-footer\" />
+    <Folder Include="app\static\static\bootstrap\docs\examples\theme\" />
+    <Folder Include="app\static\static\bootstrap\docs\examples\tooltip-viewport\" />
+    <Folder Include="app\static\static\bootstrap\docs\_data\" />
+    <Folder Include="app\static\static\bootstrap\docs\_includes\" />
+    <Folder Include="app\static\static\bootstrap\docs\_includes\components\" />
+    <Folder Include="app\static\static\bootstrap\docs\_includes\css\" />
+    <Folder Include="app\static\static\bootstrap\docs\_includes\getting-started\" />
+    <Folder Include="app\static\static\bootstrap\docs\_includes\js\" />
+    <Folder Include="app\static\static\bootstrap\docs\_includes\nav\" />
+    <Folder Include="app\static\static\bootstrap\docs\_jade\" />
+    <Folder Include="app\static\static\bootstrap\docs\_layouts\" />
+    <Folder Include="app\static\static\bootstrap\docs\_plugins\" />
+    <Folder Include="app\static\static\bootstrap\fonts\" />
+    <Folder Include="app\static\static\bootstrap\grunt\" />
+    <Folder Include="app\static\static\bootstrap\js\" />
+    <Folder Include="app\static\static\bootstrap\js\tests\" />
+    <Folder Include="app\static\static\bootstrap\js\tests\unit\" />
+    <Folder Include="app\static\static\bootstrap\js\tests\vendor\" />
+    <Folder Include="app\static\static\bootstrap\js\tests\visual\" />
+    <Folder Include="app\static\static\bootstrap\less\" />
+    <Folder Include="app\static\static\bootstrap\less\mixins\" />
+    <Folder Include="app\static\static\bootstrap\test-infra\" />
+    <Folder Include="app\static\static\images\" />
+    <Folder Include="app\templates\" />
+    <Folder Include="app\templates\app\" />
+    <Folder Include="clique\" />
+    <Folder Include="assets\" />
+    <Folder Include="static\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="app\static\static\bootstrap\.editorconfig" />
+    <Content Include="app\static\static\bootstrap\.gitattributes" />
+    <Content Include="app\static\static\bootstrap\.gitignore" />
+    <Content Include="app\static\static\bootstrap\.travis.yml" />
+    <Content Include="app\static\static\bootstrap\bower.json" />
+    <Content Include="app\static\static\bootstrap\CNAME" />
+    <Content Include="app\static\static\bootstrap\composer.json" />
+    <Content Include="app\static\static\bootstrap\CONTRIBUTING.md" />
+    <Content Include="app\static\static\bootstrap\dist\css\bootstrap-theme.css" />
+    <Content Include="app\static\static\bootstrap\dist\css\bootstrap-theme.css.map" />
+    <Content Include="app\static\static\bootstrap\dist\css\bootstrap-theme.min.css" />
+    <Content Include="app\static\static\bootstrap\dist\css\bootstrap.css" />
+    <Content Include="app\static\static\bootstrap\dist\css\bootstrap.css.map" />
+    <Content Include="app\static\static\bootstrap\dist\css\bootstrap.min.css" />
+    <Content Include="app\static\static\bootstrap\dist\css\myfile.css" />
+    <Content Include="app\static\static\bootstrap\dist\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="app\static\static\bootstrap\dist\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="app\static\static\bootstrap\dist\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="app\static\static\bootstrap\dist\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="app\static\static\bootstrap\dist\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="app\static\static\bootstrap\dist\js\bootstrap.js" />
+    <Content Include="app\static\static\bootstrap\dist\js\bootstrap.min.js" />
+    <Content Include="app\static\static\bootstrap\dist\js\jquery-1.11.2.min.js" />
+    <Content Include="app\static\static\bootstrap\dist\js\npm.js" />
+    <Content Include="app\static\static\bootstrap\docs\about.html" />
+    <Content Include="app\static\static\bootstrap\docs\apple-touch-icon.png" />
+    <Content Include="app\static\static\bootstrap\docs\assets\brand\bootstrap-outline.svg" />
+    <Content Include="app\static\static\bootstrap\docs\assets\brand\bootstrap-punchout.svg" />
+    <Content Include="app\static\static\bootstrap\docs\assets\brand\bootstrap-solid.svg" />
+    <Content Include="app\static\static\bootstrap\docs\assets\css\docs.min.css" />
+    <Content Include="app\static\static\bootstrap\docs\assets\css\src\docs.css" />
+    <Content Include="app\static\static\bootstrap\docs\assets\css\src\pygments-manni.css" />
+    <Content Include="app\static\static\bootstrap\docs\assets\flash\ZeroClipboard.swf" />
+    <Content Include="app\static\static\bootstrap\docs\assets\img\components.png" />
+    <Content Include="app\static\static\bootstrap\docs\assets\img\devices.png" />
+    <Content Include="app\static\static\bootstrap\docs\assets\img\sass-less.png" />
+    <Content Include="app\static\static\bootstrap\docs\assets\js\customize.min.js" />
+    <Content Include="app\static\static\bootstrap\docs\assets\js\docs.min.js" />
+    <Content Include="app\static\static\bootstrap\docs\assets\js\ie-emulation-modes-warning.js" />
+    <Content Include="app\static\static\bootstrap\docs\assets\js\ie10-viewport-bug-workaround.js" />
+    <Content Include="app\static\static\bootstrap\docs\assets\js\ie8-responsive-file-warning.js" />
+    <Content Include="app\static\static\bootstrap\docs\assets\js\raw-files.min.js" />
+    <Content Include="app\static\static\bootstrap\docs\assets\js\src\application.js" />
+    <Content Include="app\static\static\bootstrap\docs\assets\js\src\customizer.js" />
+    <Content Include="app\static\static\bootstrap\docs\assets\js\vendor\autoprefixer.js" />
+    <Content Include="app\static\static\bootstrap\docs\assets\js\vendor\Blob.js" />
+    <Content Include="app\static\static\bootstrap\docs\assets\js\vendor\FileSaver.js" />
+    <Content Include="app\static\static\bootstrap\docs\assets\js\vendor\holder.js" />
+    <Content Include="app\static\static\bootstrap\docs\assets\js\vendor\jszip.min.js" />
+    <Content Include="app\static\static\bootstrap\docs\assets\js\vendor\less.min.js" />
+    <Content Include="app\static\static\bootstrap\docs\assets\js\vendor\uglify.min.js" />
+    <Content Include="app\static\static\bootstrap\docs\assets\js\vendor\ZeroClipboard.min.js" />
+    <Content Include="app\static\static\bootstrap\docs\browser-bugs.html" />
+    <Content Include="app\static\static\bootstrap\docs\components.html" />
+    <Content Include="app\static\static\bootstrap\docs\css.html" />
+    <Content Include="app\static\static\bootstrap\docs\customize.html" />
+    <Content Include="app\static\static\bootstrap\docs\dist\css\bootstrap-theme.css" />
+    <Content Include="app\static\static\bootstrap\docs\dist\css\bootstrap-theme.css.map" />
+    <Content Include="app\static\static\bootstrap\docs\dist\css\bootstrap-theme.min.css" />
+    <Content Include="app\static\static\bootstrap\docs\dist\css\bootstrap.css" />
+    <Content Include="app\static\static\bootstrap\docs\dist\css\bootstrap.css.map" />
+    <Content Include="app\static\static\bootstrap\docs\dist\css\bootstrap.min.css" />
+    <Content Include="app\static\static\bootstrap\docs\dist\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="app\static\static\bootstrap\docs\dist\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="app\static\static\bootstrap\docs\dist\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="app\static\static\bootstrap\docs\dist\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="app\static\static\bootstrap\docs\dist\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="app\static\static\bootstrap\docs\dist\js\bootstrap.js" />
+    <Content Include="app\static\static\bootstrap\docs\dist\js\bootstrap.min.js" />
+    <Content Include="app\static\static\bootstrap\docs\dist\js\npm.js" />
+    <Content Include="app\static\static\bootstrap\docs\examples\blog\blog.css" />
+    <Content Include="app\static\static\bootstrap\docs\examples\blog\index.html" />
+    <Content Include="app\static\static\bootstrap\docs\examples\carousel\carousel.css" />
+    <Content Include="app\static\static\bootstrap\docs\examples\carousel\index.html" />
+    <Content Include="app\static\static\bootstrap\docs\examples\cover\cover.css" />
+    <Content Include="app\static\static\bootstrap\docs\examples\cover\index.html" />
+    <Content Include="app\static\static\bootstrap\docs\examples\dashboard\dashboard.css" />
+    <Content Include="app\static\static\bootstrap\docs\examples\dashboard\index.html" />
+    <Content Include="app\static\static\bootstrap\docs\examples\grid\grid.css" />
+    <Content Include="app\static\static\bootstrap\docs\examples\grid\index.html" />
+    <Content Include="app\static\static\bootstrap\docs\examples\jumbotron-narrow\index.html" />
+    <Content Include="app\static\static\bootstrap\docs\examples\jumbotron-narrow\jumbotron-narrow.css" />
+    <Content Include="app\static\static\bootstrap\docs\examples\jumbotron\index.html" />
+    <Content Include="app\static\static\bootstrap\docs\examples\jumbotron\jumbotron.css" />
+    <Content Include="app\static\static\bootstrap\docs\examples\justified-nav\index.html" />
+    <Content Include="app\static\static\bootstrap\docs\examples\justified-nav\justified-nav.css" />
+    <Content Include="app\static\static\bootstrap\docs\examples\navbar-fixed-top\index.html" />
+    <Content Include="app\static\static\bootstrap\docs\examples\navbar-fixed-top\navbar-fixed-top.css" />
+    <Content Include="app\static\static\bootstrap\docs\examples\navbar-static-top\index.html" />
+    <Content Include="app\static\static\bootstrap\docs\examples\navbar-static-top\navbar-static-top.css" />
+    <Content Include="app\static\static\bootstrap\docs\examples\navbar\index.html" />
+    <Content Include="app\static\static\bootstrap\docs\examples\navbar\navbar.css" />
+    <Content Include="app\static\static\bootstrap\docs\examples\non-responsive\index.html" />
+    <Content Include="app\static\static\bootstrap\docs\examples\non-responsive\non-responsive.css" />
+    <Content Include="app\static\static\bootstrap\docs\examples\offcanvas\index.html" />
+    <Content Include="app\static\static\bootstrap\docs\examples\offcanvas\offcanvas.css" />
+    <Content Include="app\static\static\bootstrap\docs\examples\offcanvas\offcanvas.js" />
+    <Content Include="app\static\static\bootstrap\docs\examples\screenshots\blog.jpg" />
+    <Content Include="app\static\static\bootstrap\docs\examples\screenshots\carousel.jpg" />
+    <Content Include="app\static\static\bootstrap\docs\examples\screenshots\cover.jpg" />
+    <Content Include="app\static\static\bootstrap\docs\examples\screenshots\dashboard.jpg" />
+    <Content Include="app\static\static\bootstrap\docs\examples\screenshots\equal-height-columns.jpg" />
+    <Content Include="app\static\static\bootstrap\docs\examples\screenshots\grid.jpg" />
+    <Content Include="app\static\static\bootstrap\docs\examples\screenshots\jumbotron-narrow.jpg" />
+    <Content Include="app\static\static\bootstrap\docs\examples\screenshots\jumbotron.jpg" />
+    <Content Include="app\static\static\bootstrap\docs\examples\screenshots\justified-nav.jpg" />
+    <Content Include="app\static\static\bootstrap\docs\examples\screenshots\navbar-fixed.jpg" />
+    <Content Include="app\static\static\bootstrap\docs\examples\screenshots\navbar-static.jpg" />
+    <Content Include="app\static\static\bootstrap\docs\examples\screenshots\navbar.jpg" />
+    <Content Include="app\static\static\bootstrap\docs\examples\screenshots\non-responsive.jpg" />
+    <Content Include="app\static\static\bootstrap\docs\examples\screenshots\offcanvas.jpg" />
+    <Content Include="app\static\static\bootstrap\docs\examples\screenshots\sign-in.jpg" />
+    <Content Include="app\static\static\bootstrap\docs\examples\screenshots\starter-template.jpg" />
+    <Content Include="app\static\static\bootstrap\docs\examples\screenshots\sticky-footer-navbar.jpg" />
+    <Content Include="app\static\static\bootstrap\docs\examples\screenshots\sticky-footer.jpg" />
+    <Content Include="app\static\static\bootstrap\docs\examples\screenshots\theme.jpg" />
+    <Content Include="app\static\static\bootstrap\docs\examples\signin\index.html" />
+    <Content Include="app\static\static\bootstrap\docs\examples\signin\signin.css" />
+    <Content Include="app\static\static\bootstrap\docs\examples\starter-template\index.html" />
+    <Content Include="app\static\static\bootstrap\docs\examples\starter-template\starter-template.css" />
+    <Content Include="app\static\static\bootstrap\docs\examples\sticky-footer-navbar\index.html" />
+    <Content Include="app\static\static\bootstrap\docs\examples\sticky-footer-navbar\sticky-footer-navbar.css" />
+    <Content Include="app\static\static\bootstrap\docs\examples\sticky-footer\index.html" />
+    <Content Include="app\static\static\bootstrap\docs\examples\sticky-footer\sticky-footer.css" />
+    <Content Include="app\static\static\bootstrap\docs\examples\theme\index.html" />
+    <Content Include="app\static\static\bootstrap\docs\examples\theme\theme.css" />
+    <Content Include="app\static\static\bootstrap\docs\examples\tooltip-viewport\index.html" />
+    <Content Include="app\static\static\bootstrap\docs\examples\tooltip-viewport\tooltip-viewport.css" />
+    <Content Include="app\static\static\bootstrap\docs\examples\tooltip-viewport\tooltip-viewport.js" />
+    <Content Include="app\static\static\bootstrap\docs\fav2.ico" />
+    <Content Include="app\static\static\bootstrap\docs\favicon.ico" />
+    <Content Include="app\static\static\bootstrap\docs\getting-started.html" />
+    <Content Include="app\static\static\bootstrap\docs\index.html" />
+    <Content Include="app\static\static\bootstrap\docs\javascript.html" />
+    <Content Include="app\static\static\bootstrap\docs\LICENSE" />
+    <Content Include="app\static\static\bootstrap\docs\migration.html" />
+    <Content Include="app\static\static\bootstrap\docs\robots.txt" />
+    <Content Include="app\static\static\bootstrap\docs\sitemap.xml" />
+    <Content Include="app\static\static\bootstrap\docs\_data\browser-bugs.yml" />
+    <Content Include="app\static\static\bootstrap\docs\_data\core-team.yml" />
+    <Content Include="app\static\static\bootstrap\docs\_data\glyphicons.yml" />
+    <Content Include="app\static\static\bootstrap\docs\_data\sass-team.yml" />
+    <Content Include="app\static\static\bootstrap\docs\_data\showcase.yml" />
+    <Content Include="app\static\static\bootstrap\docs\_data\translations.yml" />
+    <Content Include="app\static\static\bootstrap\docs\_includes\ads.html" />
+    <Content Include="app\static\static\bootstrap\docs\_includes\components\alerts.html" />
+    <Content Include="app\static\static\bootstrap\docs\_includes\components\badges.html" />
+    <Content Include="app\static\static\bootstrap\docs\_includes\components\breadcrumbs.html" />
+    <Content Include="app\static\static\bootstrap\docs\_includes\components\button-dropdowns.html" />
+    <Content Include="app\static\static\bootstrap\docs\_includes\components\button-groups.html" />
+    <Content Include="app\static\static\bootstrap\docs\_includes\components\dropdowns.html" />
+    <Content Include="app\static\static\bootstrap\docs\_includes\components\glyphicons.html" />
+    <Content Include="app\static\static\bootstrap\docs\_includes\components\input-groups.html" />
+    <Content Include="app\static\static\bootstrap\docs\_includes\components\jumbotron.html" />
+    <Content Include="app\static\static\bootstrap\docs\_includes\components\labels.html" />
+    <Content Include="app\static\static\bootstrap\docs\_includes\components\list-group.html" />
+    <Content Include="app\static\static\bootstrap\docs\_includes\components\media.html" />
+    <Content Include="app\static\static\bootstrap\docs\_includes\components\navbar.html" />
+    <Content Include="app\static\static\bootstrap\docs\_includes\components\navs.html" />
+    <Content Include="app\static\static\bootstrap\docs\_includes\components\page-header.html" />
+    <Content Include="app\static\static\bootstrap\docs\_includes\components\pagination.html" />
+    <Content Include="app\static\static\bootstrap\docs\_includes\components\panels.html" />
+    <Content Include="app\static\static\bootstrap\docs\_includes\components\progress-bars.html" />
+    <Content Include="app\static\static\bootstrap\docs\_includes\components\responsive-embed.html" />
+    <Content Include="app\static\static\bootstrap\docs\_includes\components\thumbnails.html" />
+    <Content Include="app\static\static\bootstrap\docs\_includes\components\wells.html" />
+    <Content Include="app\static\static\bootstrap\docs\_includes\css\buttons.html" />
+    <Content Include="app\static\static\bootstrap\docs\_includes\css\code.html" />
+    <Content Include="app\static\static\bootstrap\docs\_includes\css\forms.html" />
+    <Content Include="app\static\static\bootstrap\docs\_includes\css\grid.html" />
+    <Content Include="app\static\static\bootstrap\docs\_includes\css\helpers.html" />
+    <Content Include="app\static\static\bootstrap\docs\_includes\css\images.html" />
+    <Content Include="app\static\static\bootstrap\docs\_includes\css\less.html" />
+    <Content Include="app\static\static\bootstrap\docs\_includes\css\overview.html" />
+    <Content Include="app\static\static\bootstrap\docs\_includes\css\responsive-utilities.html" />
+    <Content Include="app\static\static\bootstrap\docs\_includes\css\sass.html" />
+    <Content Include="app\static\static\bootstrap\docs\_includes\css\tables.html" />
+    <Content Include="app\static\static\bootstrap\docs\_includes\css\type.html" />
+    <Content Include="app\static\static\bootstrap\docs\_includes\customizer-variables.html" />
+    <Content Include="app\static\static\bootstrap\docs\_includes\footer.html" />
+    <Content Include="app\static\static\bootstrap\docs\_includes\getting-started\accessibility.html" />
+    <Content Include="app\static\static\bootstrap\docs\_includes\getting-started\browser-device-support.html" />
+    <Content Include="app\static\static\bootstrap\docs\_includes\getting-started\community.html" />
+    <Content Include="app\static\static\bootstrap\docs\_includes\getting-started\disabling-responsiveness.html" />
+    <Content Include="app\static\static\bootstrap\docs\_includes\getting-started\download.html" />
+    <Content Include="app\static\static\bootstrap\docs\_includes\getting-started\examples.html" />
+    <Content Include="app\static\static\bootstrap\docs\_includes\getting-started\grunt.html" />
+    <Content Include="app\static\static\bootstrap\docs\_includes\getting-started\license.html" />
+    <Content Include="app\static\static\bootstrap\docs\_includes\getting-started\template.html" />
+    <Content Include="app\static\static\bootstrap\docs\_includes\getting-started\third-party-support.html" />
+    <Content Include="app\static\static\bootstrap\docs\_includes\getting-started\tools.html" />
+    <Content Include="app\static\static\bootstrap\docs\_includes\getting-started\translations.html" />
+    <Content Include="app\static\static\bootstrap\docs\_includes\getting-started\whats-included.html" />
+    <Content Include="app\static\static\bootstrap\docs\_includes\header.html" />
+    <Content Include="app\static\static\bootstrap\docs\_includes\js\affix.html" />
+    <Content Include="app\static\static\bootstrap\docs\_includes\js\alerts.html" />
+    <Content Include="app\static\static\bootstrap\docs\_includes\js\buttons.html" />
+    <Content Include="app\static\static\bootstrap\docs\_includes\js\carousel.html" />
+    <Content Include="app\static\static\bootstrap\docs\_includes\js\collapse.html" />
+    <Content Include="app\static\static\bootstrap\docs\_includes\js\dropdowns.html" />
+    <Content Include="app\static\static\bootstrap\docs\_includes\js\modal.html" />
+    <Content Include="app\static\static\bootstrap\docs\_includes\js\overview.html" />
+    <Content Include="app\static\static\bootstrap\docs\_includes\js\popovers.html" />
+    <Content Include="app\static\static\bootstrap\docs\_includes\js\scrollspy.html" />
+    <Content Include="app\static\static\bootstrap\docs\_includes\js\tabs.html" />
+    <Content Include="app\static\static\bootstrap\docs\_includes\js\tooltips.html" />
+    <Content Include="app\static\static\bootstrap\docs\_includes\js\transitions.html" />
+    <Content Include="app\static\static\bootstrap\docs\_includes\nav\about.html" />
+    <Content Include="app\static\static\bootstrap\docs\_includes\nav\components.html" />
+    <Content Include="app\static\static\bootstrap\docs\_includes\nav\css.html" />
+    <Content Include="app\static\static\bootstrap\docs\_includes\nav\customize.html" />
+    <Content Include="app\static\static\bootstrap\docs\_includes\nav\getting-started.html" />
+    <Content Include="app\static\static\bootstrap\docs\_includes\nav\javascript.html" />
+    <Content Include="app\static\static\bootstrap\docs\_includes\nav\main.html" />
+    <Content Include="app\static\static\bootstrap\docs\_includes\nav\migration.html" />
+    <Content Include="app\static\static\bootstrap\docs\_includes\social-buttons.html" />
+    <Content Include="app\static\static\bootstrap\docs\_jade\customizer-nav.jade" />
+    <Content Include="app\static\static\bootstrap\docs\_jade\customizer-variables.jade" />
+    <Content Include="app\static\static\bootstrap\docs\_layouts\default.html" />
+    <Content Include="app\static\static\bootstrap\docs\_layouts\home.html" />
+    <Content Include="app\static\static\bootstrap\docs\_plugins\bridge.rb" />
+    <Content Include="app\static\static\bootstrap\docs\_plugins\bugify.rb" />
+    <Content Include="app\static\static\bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="app\static\static\bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="app\static\static\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="app\static\static\bootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="app\static\static\bootstrap\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="app\static\static\bootstrap\Gruntfile.js" />
+    <Content Include="app\static\static\bootstrap\grunt\.jshintrc" />
+    <Content Include="app\static\static\bootstrap\grunt\bs-commonjs-generator.js" />
+    <Content Include="app\static\static\bootstrap\grunt\bs-glyphicons-data-generator.js" />
+    <Content Include="app\static\static\bootstrap\grunt\bs-lessdoc-parser.js" />
+    <Content Include="app\static\static\bootstrap\grunt\bs-raw-files-generator.js" />
+    <Content Include="app\static\static\bootstrap\grunt\configBridge.json" />
+    <Content Include="app\static\static\bootstrap\grunt\sauce_browsers.yml" />
+    <Content Include="app\static\static\bootstrap\js\.jscsrc" />
+    <Content Include="app\static\static\bootstrap\js\.jshintrc" />
+    <Content Include="app\static\static\bootstrap\js\affix.js" />
+    <Content Include="app\static\static\bootstrap\js\alert.js" />
+    <Content Include="app\static\static\bootstrap\js\button.js" />
+    <Content Include="app\static\static\bootstrap\js\carousel.js" />
+    <Content Include="app\static\static\bootstrap\js\collapse.js" />
+    <Content Include="app\static\static\bootstrap\js\dropdown.js" />
+    <Content Include="app\static\static\bootstrap\js\modal.js" />
+    <Content Include="app\static\static\bootstrap\js\popover.js" />
+    <Content Include="app\static\static\bootstrap\js\scrollspy.js" />
+    <Content Include="app\static\static\bootstrap\js\tab.js" />
+    <Content Include="app\static\static\bootstrap\js\tests\index.html" />
+    <Content Include="app\static\static\bootstrap\js\tests\unit\.jshintrc" />
+    <Content Include="app\static\static\bootstrap\js\tests\unit\affix.js" />
+    <Content Include="app\static\static\bootstrap\js\tests\unit\alert.js" />
+    <Content Include="app\static\static\bootstrap\js\tests\unit\button.js" />
+    <Content Include="app\static\static\bootstrap\js\tests\unit\carousel.js" />
+    <Content Include="app\static\static\bootstrap\js\tests\unit\collapse.js" />
+    <Content Include="app\static\static\bootstrap\js\tests\unit\dropdown.js" />
+    <Content Include="app\static\static\bootstrap\js\tests\unit\modal.js" />
+    <Content Include="app\static\static\bootstrap\js\tests\unit\phantom.js" />
+    <Content Include="app\static\static\bootstrap\js\tests\unit\popover.js" />
+    <Content Include="app\static\static\bootstrap\js\tests\unit\scrollspy.js" />
+    <Content Include="app\static\static\bootstrap\js\tests\unit\tab.js" />
+    <Content Include="app\static\static\bootstrap\js\tests\unit\tooltip.js" />
+    <Content Include="app\static\static\bootstrap\js\tests\vendor\jquery.min.js" />
+    <Content Include="app\static\static\bootstrap\js\tests\vendor\qunit.css" />
+    <Content Include="app\static\static\bootstrap\js\tests\vendor\qunit.js" />
+    <Content Include="app\static\static\bootstrap\js\tests\visual\affix.html" />
+    <Content Include="app\static\static\bootstrap\js\tests\visual\alert.html" />
+    <Content Include="app\static\static\bootstrap\js\tests\visual\button.html" />
+    <Content Include="app\static\static\bootstrap\js\tests\visual\carousel.html" />
+    <Content Include="app\static\static\bootstrap\js\tests\visual\collapse.html" />
+    <Content Include="app\static\static\bootstrap\js\tests\visual\dropdown.html" />
+    <Content Include="app\static\static\bootstrap\js\tests\visual\modal.html" />
+    <Content Include="app\static\static\bootstrap\js\tests\visual\popover.html" />
+    <Content Include="app\static\static\bootstrap\js\tests\visual\scrollspy.html" />
+    <Content Include="app\static\static\bootstrap\js\tests\visual\tab.html" />
+    <Content Include="app\static\static\bootstrap\js\tests\visual\tooltip.html" />
+    <Content Include="app\static\static\bootstrap\js\tooltip.js" />
+    <Content Include="app\static\static\bootstrap\js\transition.js" />
+    <Content Include="app\static\static\bootstrap\less\.csscomb.json" />
+    <Content Include="app\static\static\bootstrap\less\.csslintrc" />
+    <Content Include="app\static\static\bootstrap\less\alerts.less" />
+    <Content Include="app\static\static\bootstrap\less\badges.less" />
+    <Content Include="app\static\static\bootstrap\less\bootstrap.less" />
+    <Content Include="app\static\static\bootstrap\less\breadcrumbs.less" />
+    <Content Include="app\static\static\bootstrap\less\button-groups.less" />
+    <Content Include="app\static\static\bootstrap\less\buttons.less" />
+    <Content Include="app\static\static\bootstrap\less\carousel.less" />
+    <Content Include="app\static\static\bootstrap\less\close.less" />
+    <Content Include="app\static\static\bootstrap\less\code.less" />
+    <Content Include="app\static\static\bootstrap\less\component-animations.less" />
+    <Content Include="app\static\static\bootstrap\less\dropdowns.less" />
+    <Content Include="app\static\static\bootstrap\less\forms.less" />
+    <Content Include="app\static\static\bootstrap\less\glyphicons.less" />
+    <Content Include="app\static\static\bootstrap\less\grid.less" />
+    <Content Include="app\static\static\bootstrap\less\input-groups.less" />
+    <Content Include="app\static\static\bootstrap\less\jumbotron.less" />
+    <Content Include="app\static\static\bootstrap\less\labels.less" />
+    <Content Include="app\static\static\bootstrap\less\list-group.less" />
+    <Content Include="app\static\static\bootstrap\less\media.less" />
+    <Content Include="app\static\static\bootstrap\less\mixins.less" />
+    <Content Include="app\static\static\bootstrap\less\mixins\alerts.less" />
+    <Content Include="app\static\static\bootstrap\less\mixins\background-variant.less" />
+    <Content Include="app\static\static\bootstrap\less\mixins\border-radius.less" />
+    <Content Include="app\static\static\bootstrap\less\mixins\buttons.less" />
+    <Content Include="app\static\static\bootstrap\less\mixins\center-block.less" />
+    <Content Include="app\static\static\bootstrap\less\mixins\clearfix.less" />
+    <Content Include="app\static\static\bootstrap\less\mixins\forms.less" />
+    <Content Include="app\static\static\bootstrap\less\mixins\gradients.less" />
+    <Content Include="app\static\static\bootstrap\less\mixins\grid-framework.less" />
+    <Content Include="app\static\static\bootstrap\less\mixins\grid.less" />
+    <Content Include="app\static\static\bootstrap\less\mixins\hide-text.less" />
+    <Content Include="app\static\static\bootstrap\less\mixins\image.less" />
+    <Content Include="app\static\static\bootstrap\less\mixins\labels.less" />
+    <Content Include="app\static\static\bootstrap\less\mixins\list-group.less" />
+    <Content Include="app\static\static\bootstrap\less\mixins\nav-divider.less" />
+    <Content Include="app\static\static\bootstrap\less\mixins\nav-vertical-align.less" />
+    <Content Include="app\static\static\bootstrap\less\mixins\opacity.less" />
+    <Content Include="app\static\static\bootstrap\less\mixins\pagination.less" />
+    <Content Include="app\static\static\bootstrap\less\mixins\panels.less" />
+    <Content Include="app\static\static\bootstrap\less\mixins\progress-bar.less" />
+    <Content Include="app\static\static\bootstrap\less\mixins\reset-filter.less" />
+    <Content Include="app\static\static\bootstrap\less\mixins\resize.less" />
+    <Content Include="app\static\static\bootstrap\less\mixins\responsive-visibility.less" />
+    <Content Include="app\static\static\bootstrap\less\mixins\size.less" />
+    <Content Include="app\static\static\bootstrap\less\mixins\tab-focus.less" />
+    <Content Include="app\static\static\bootstrap\less\mixins\table-row.less" />
+    <Content Include="app\static\static\bootstrap\less\mixins\text-emphasis.less" />
+    <Content Include="app\static\static\bootstrap\less\mixins\text-overflow.less" />
+    <Content Include="app\static\static\bootstrap\less\mixins\vendor-prefixes.less" />
+    <Content Include="app\static\static\bootstrap\less\modals.less" />
+    <Content Include="app\static\static\bootstrap\less\navbar.less" />
+    <Content Include="app\static\static\bootstrap\less\navs.less" />
+    <Content Include="app\static\static\bootstrap\less\normalize.less" />
+    <Content Include="app\static\static\bootstrap\less\pager.less" />
+    <Content Include="app\static\static\bootstrap\less\pagination.less" />
+    <Content Include="app\static\static\bootstrap\less\panels.less" />
+    <Content Include="app\static\static\bootstrap\less\popovers.less" />
+    <Content Include="app\static\static\bootstrap\less\print.less" />
+    <Content Include="app\static\static\bootstrap\less\progress-bars.less" />
+    <Content Include="app\static\static\bootstrap\less\responsive-embed.less" />
+    <Content Include="app\static\static\bootstrap\less\responsive-utilities.less" />
+    <Content Include="app\static\static\bootstrap\less\scaffolding.less" />
+    <Content Include="app\static\static\bootstrap\less\tables.less" />
+    <Content Include="app\static\static\bootstrap\less\theme.less" />
+    <Content Include="app\static\static\bootstrap\less\thumbnails.less" />
+    <Content Include="app\static\static\bootstrap\less\tooltip.less" />
+    <Content Include="app\static\static\bootstrap\less\type.less" />
+    <Content Include="app\static\static\bootstrap\less\utilities.less" />
+    <Content Include="app\static\static\bootstrap\less\variables.less" />
+    <Content Include="app\static\static\bootstrap\less\wells.less" />
+    <Content Include="app\static\static\bootstrap\LICENSE" />
+    <Content Include="app\static\static\bootstrap\package.json" />
+    <Content Include="app\static\static\bootstrap\README.md" />
+    <Content Include="app\static\static\bootstrap\test-infra\npm-shrinkwrap.json" />
+    <Content Include="app\static\static\bootstrap\test-infra\README.md" />
+    <Content Include="app\static\static\bootstrap\test-infra\requirements.txt" />
+    <Content Include="app\static\static\bootstrap\test-infra\S3Cachefile.json" />
+    <Content Include="app\static\static\bootstrap\test-infra\uncached-npm-install.sh" />
+    <Content Include="app\static\static\bootstrap\_config.yml" />
+    <Content Include="app\static\static\images\1.JPG" />
+    <Content Include="app\static\static\images\2.JPG" />
+    <Content Include="app\static\static\images\3.JPG" />
+    <Content Include="app\static\static\images\friend1.jpg" />
+    <Content Include="app\static\static\images\friend2.jpg" />
+    <Content Include="app\static\static\images\friend3.jpg" />
+    <Content Include="app\static\static\images\friend4.jpg" />
+    <Content Include="app\static\static\images\friends6.jpg" />
+    <Content Include="app\static\static\images\friends7.jpg" />
+    <Content Include="app\static\static\images\like.png" />
+    <Content Include="app\static\static\images\Profile.jpeg" />
+    <Content Include="app\templates\error.html" />
+    <Content Include="app\templates\homepage.html" />
+    <Content Include="app\templates\loginpage.html" />
+    <Content Include="app\templates\profile.html" />
+    <Content Include="app\templates\signup.html" />
+    <Content Include="app\templates\success.html" />
+    <None Include="clique.pubxml" />
+    <Content Include="requirements.txt" />
+    <Content Include="db.sqlite3" />
+    <Content Include="app\static\app\content\bootstrap.css" />
+    <Content Include="app\static\app\content\bootstrap.min.css" />
+    <Content Include="app\static\app\content\site.css" />
+    <Content Include="app\static\app\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="app\static\app\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="app\static\app\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="app\static\app\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="app\static\app\scripts\bootstrap.js" />
+    <Content Include="app\static\app\scripts\bootstrap.min.js" />
+    <Content Include="app\static\app\scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="app\static\app\scripts\jquery-1.10.2.js" />
+    <Content Include="app\static\app\scripts\jquery-1.10.2.min.js" />
+    <Content Include="app\static\app\scripts\jquery-1.10.2.min.map" />
+    <Content Include="app\static\app\scripts\jquery.validate-vsdoc.js" />
+    <Content Include="app\static\app\scripts\jquery.validate.js" />
+    <Content Include="app\static\app\scripts\jquery.validate.min.js" />
+    <Content Include="app\static\app\scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="app\static\app\scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="app\static\app\scripts\modernizr-2.6.2.js" />
+    <Content Include="app\static\app\scripts\respond.js" />
+    <Content Include="app\static\app\scripts\respond.min.js" />
+    <Content Include="app\static\app\scripts\_references.js" />
+    <Content Include="app\templates\app\about.html" />
+    <Content Include="app\templates\app\contact.html" />
+    <Content Include="app\templates\app\index.html" />
+    <Content Include="app\templates\app\layout.html" />
+    <Content Include="app\templates\app\login.html" />
+    <Content Include="app\templates\app\loginpartial.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="readme.mht">
+      <SubType>WebBrowser</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Interpreter Include="env\">
+      <Id>{51b1b2c4-9580-4849-a526-f8a6568c65ee}</Id>
+      <BaseInterpreter>{2af0f10d-7135-4994-9156-5d01c9c11b7e}</BaseInterpreter>
+      <Version>3.4</Version>
+      <Description>env (Python 3.4)</Description>
+      <InterpreterPath>Scripts\python.exe</InterpreterPath>
+      <WindowsInterpreterPath>Scripts\pythonw.exe</WindowsInterpreterPath>
+      <LibraryPath>Lib\</LibraryPath>
+      <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>
+      <Architecture>X86</Architecture>
+    </Interpreter>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.Django.targets" />
+  <!-- Specify pre- and post-build commands in the BeforeBuild and 
+       AfterBuild targets below. -->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <AutoAssignPort>True</AutoAssignPort>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://localhost</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+        <WebProjectProperties>
+          <StartPageUrl>
+          </StartPageUrl>
+          <StartAction>CurrentPage</StartAction>
+          <AspNetDebugging>True</AspNetDebugging>
+          <SilverlightDebugging>False</SilverlightDebugging>
+          <NativeDebugging>False</NativeDebugging>
+          <SQLDebugging>False</SQLDebugging>
+          <ExternalProgram>
+          </ExternalProgram>
+          <StartExternalURL>
+          </StartExternalURL>
+          <StartCmdLineArguments>
+          </StartCmdLineArguments>
+          <StartWorkingDirectory>
+          </StartWorkingDirectory>
+          <EnableENC>False</EnableENC>
+          <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

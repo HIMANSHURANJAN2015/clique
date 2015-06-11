@@ -1,0 +1,7 @@
+inspect
+warnings
+RemovedInDjango20Warning
+RemovedInDjango19Warning
+RemovedInNextVersionWarning
+warn_about_renamed_method
+RenameMethodsBase

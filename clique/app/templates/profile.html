@@ -1,0 +1,609 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+      {% load staticfiles %}
+      {% load static %}
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="HimanshuRanjan">
+    <link rel="icon" href="{% static 'static/bootstrap/docs/fav2.ico' %}">
+    <title>CLIQUE</title>
+	<!-- Bootstrap core CSS -->
+	<link href="{% static 'static/bootstrap/dist/css/bootstrap.min.css' %}" rel="stylesheet">
+	<!-- Custom styles -->
+    <link href="{% static 'static/bootstrap/dist/css/myfile.css' %}" rel="stylesheet">
+	<script src="assets/js/ie-emulation-modes-warning.js"></script>
+	<!--This is to Enable Tabbing Action-->
+		<link rel="stylesheet" href="{% static 'static/bootstrap/dist/css/bootstrap-theme.min.css' %}">
+		<script src="{% static  'static/bootstrap/dist/js/jquery-1.11.2.min.js' %} "></script>
+		<script src="{% static 'static/bootstrap/dist/js/bootstrap.min.js' %}"></script>
+		<style type="text/css">
+			{
+				.bs-example
+				margin: 20px;
+	     	}
+		</style>	
+	<!--Ends Tabbing Action-->
+	<!-- jioo betta-->
+	<style type="text/css">
+        ul.enlarge{
+            list-style-type:none; /*remove the bullet point*/
+                }
+            ul.enlarge li{
+            display:inline-block; /*places the images in a line*/
+            position: relative; /*allows precise positioning of the popup image when used with position:absolute - see support section */
+            z-index: 0; /*resets the stack order of the list items - we'll increase in step 4. See support section for more info*/
+            margin:10px 40px 0 20px; /*space between the images*/
+            }
+        ul.enlarge span{
+position:absolute; /*see support section for more info on positioning*/
+left: -9999px; /*moves the span off the page, effectively hidding it from view*/
+}
+        ul.enlarge img{
+/*give the thumbnails a frame*/
+background-color:#eae9d4; /*frame colour*/
+padding: 6px; /*frame size*/
+/*add a drop shadow to the frame*/
+-webkit-box-shadow: 0 0 6px rgba(132, 132, 132, .75);
+-moz-box-shadow: 0 0 6px rgba(132, 132, 132, .75);
+box-shadow: 0 0 6px rgba(132, 132, 132, .75);
+/*and give the corners a small curve*/
+-webkit-border-radius: 4px;
+-moz-border-radius: 4px;
+border-radius: 4px;
+}
+
+ul.enlarge li:hover{
+z-index: 50; /*places the popups infront of the thumbnails, which we gave a z-index of 0 in step 1*/ 
+cursor:pointer; /*changes the cursor to a hand*/
+}
+/***We bring the large image back onto the page by reducing left from -9999px (set in step 2) to figures below***/ 
+ul.enlarge li:hover span{ /*positions the <span> when the <li> (which contains the thumbnail) is hovered*/ 
+top: -100px; /*the distance from the bottom of the thumbnail to the top of the popup image*/
+left: -100px; /*distance from the left of the thumbnail to the left of the popup image*/
+}
+/***To make it look neater we used :nth-child to set a different left distance for each image***/ 
+ul.enlarge li:hover:nth-child(2) span{
+left: -100px; 
+}
+ul.enlarge li:hover:nth-child(3) span{
+left: -200px; 
+}
+
+ul.enlarge span img{
+padding: 2px; /*size of the frame*/
+background: #ccc; /*colour of the frame*/
+}
+/***Style the <span> containing the framed images and the caption***/
+ul.enlarge span{
+/**Style the frame**/
+padding: 10px; /*size of the frame*/
+background:#eae9d4; /*colour of the frame*/
+/*add a drop shadow to the frame*/
+-webkit-box-shadow: 0 0 20px rgba(0,0,0, .75));
+-moz-box-shadow: 0 0 20px rgba(0,0,0, .75);
+box-shadow: 0 0 20px rgba(0,0,0, .75);
+/*give the corners a curve*/
+-webkit-border-radius: 8px;
+-moz-border-radius: 8px;
+border-radius:8px;
+/**Style the caption**/
+font-family: 'Droid Sans', sans-serif; /*Droid Sans is available from Google fonts*/
+font-size:.9em;
+text-align: center;
+color: #495a62;
+}
+
+		#rcorners1 {
+    border-radius: 25px;
+    background: #8AC007;
+    padding: 20px; 
+    width: 200px;
+    height: 150px;    
+            }
+        
+        body
+		{
+		overflow-y: scroll;    
+		overflow-x: hidden;
+		}
+		#size
+		{
+			width:100px;
+			height:150px;
+		}
+		
+		.form-signin
+		{
+			max-width: 330px;
+			padding: 15px;
+			margin: 0 auto;
+		}
+
+		.form-signin .form-signin-heading,
+		.form-signin .checkbox 
+		{
+			margin-bottom: 10px;
+		}
+	  
+	   .form-signin .checkbox
+	   {
+			font-weight: normal;
+	   }
+	   
+	   .form-signin .form-control 
+	   {
+			position: relative;
+			height: auto;
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			box-sizing: border-box;
+			padding: 10px;
+			font-size: 16px;
+	   }
+	   
+	   .form-signin .form-control:focus 
+	   {
+			z-index: 2;
+	   }
+	
+    .black_overlay{
+        display: none;
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        z-index:1001;
+        -moz-opacity: 0.8;
+        opacity:.80;
+        filter: alpha(opacity=80);
+    }
+    .white_content {
+        display: none;
+        position: absolute;
+        top: 25%;
+        left: 25%;
+        width: 50%;
+        height: 50%;
+        padding: 16px;
+        border: 16px solid blue;
+        background-color: white;
+        z-index:1002;
+        overflow: auto;
+    }
+    .mycontent-left {
+  border-right: 1px dashed #333;
+}
+	.col-xs-8 col-sm-8 {
+  border-right: 1px dashed #333;
+}
+
+    </style>
+  </head>
+
+  <body>
+	<div id="light" class="white_content"><span id="popupdiv">This is the prescription content. </span><a href = "javascript:void(0)" onclick = "document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'"><span id="popupdiv2">Close</span></a></div>
+	<div id="light2" class="white_content"><span id="popupdiv2">This is the prescription content. </span><a href = "#Patient_homepage" onclick = "document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'"><span id="popupdiv2">Close</span></a></div>
+					<div id="fade" class="black_overlay"></div>
+	<!--navigation bar-->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#"> Hello ,{{ name }}</a>
+                
+			</div>
+			<div id="navbar" class="navbar-collapse collapse">
+				<ul class="nav navbar-nav navbar-right">
+					<li>User Dashboard</li>
+                    {% if count_request != null %}
+                    <li><a data-toggle="tab" href="#clique" >U HAVE {{count_request}} requests pending !!</a></li>
+                    {% else %}
+                       <li><a data-toggle="tab" href="#clique" >U HAVE no requests pending !!</a></li>
+                    {% endif %}
+					<li><a href="{% url 'loginurl' %}">LogOut</a></li>
+                    
+				</ul>
+				
+          
+			</div>
+		</div>
+    </nav>
+	<!--end of navigation bar-->
+	<!--side Navigation bar and Place holder-->
+    <div class="container-fluid">
+		<div class="row">
+			<!--Side Navigation Bar-->
+			<div class="col-sm-3 col-md-2 sidebar">
+				<!--Profile pic of User-->
+                <p>{% if profilepic %}
+                    <!-- <p><img src="/assets/{{ profilepic }}" width="800"  /></p> -->
+                    
+                    <p><img src="https://clique.blob.core.windows.net/new-public-container/{{ profilepic }}" alt="No profile pic" width="200"  /></p>
+                    {% else %}
+                    <img src="{% static 'static/images/Profile.jpeg' %}"  />
+                   {% endif %}
+                </p>
+				
+				<!--links on side Navigation bar-->
+					<ul class="nav nav-sidebar">
+						<ul class="nav nav-tabs nav-stacked">
+							<li id="link1" class="active"><a data-toggle="tab" href="#homepage">HOME PAGE</a></li>
+							<li id="link2" ><a data-toggle="tab" href="#clique" >CLIQUE</a></li>
+							<li id="link3"><a data-toggle="tab" href="#searchfriend" >SEARCH FRIEND</a></li>
+							<li id="link4"><a data-toggle="tab" href="#subscription">YOUR SUBSCRIPTIONS</a></li>
+                            <li id="link6"><a data-toggle="tab" href="#uploaded">UPLOADED PHOTOS</a></li>
+                            
+							<li id="link5"><a data-toggle="tab" href="#Profile">MANAGE PROFILE</a></li>
+						</ul>
+					</ul>	
+			</div>
+			<!--Rest of Front page-->
+			<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+				<div class="tab-content">
+                    <!--    @homepage-->
+					<div id="homepage" class="tab-pane fade in active">
+						<h1 class="sub-header" >TIMELINE</h1><br>
+                        hello {{ name }}
+                        <hr style="color:black;background-color:#c00;height:2px;border:none;" /> 
+                               
+                            <div class="row placeholders">
+                            <!---   timeline   -->
+                            <div class="col-xs-10 col-sm-10 ">
+                                  
+                                 {% for i in activitydictlist %}
+                                
+                                  {{i.by}} {{ i.activity }} on {{ i.when }} 
+                                   <p>{% if profilepic %}
+                                       <!-- <p><img src="/assets/{{ profilepic }}" width="800"  /></p> -->
+                                        
+                                        <ul class="enlarge">
+                                                    <li>
+                                                    <img src="https://clique.blob.core.windows.net/new-public-container/{{ i.pic }}"  width="300px" height="300px" alt="Deckchairs" />
+                                                    <span> <!--span contains the popup image-->
+                                                    <img src="https://clique.blob.core.windows.net/new-public-container/{{ i.pic }}" width="800px" alt="Deckchairs" /> <!--popup image-->
+                                                    <br /> {{ i.data }}<!--caption appears under the popup image-->
+                                                    </span>
+                                                </li>
+                                          </ul> 
+                                      {% endif %}
+                                      <img src="{% static 'static/images/like.png' %}" height="40px" width="40px" />
+                                      {{ i.like }}
+                                  </p> 
+                                  {% endfor %}
+                                  
+                            </div>
+                            <!--    adverstisemnt   -->
+                            <div class="col-xs-1 col-sm-1"  border="5px solid green">
+                               flipkart
+                                wwww.flipkart.com
+                                ola
+                                www.ola.com
+                                </div>
+                        </div>
+                                       
+                        
+                        
+                        
+                        
+                    </div>
+					<!--    @HISTORY BOTH-->
+					<div id="clique" class="tab-pane fade">
+						<h1 class="sub-header" >YOUR CLIQUE</h1><br>
+						<!--For tabs-->
+						<ul class="nav nav-pills">
+							<li class="active"><a data-toggle="tab" href="#friends"><span class="glyphicon glyphicon-th-list"></span> FRIENDS</a></li>
+							<li><a data-toggle="tab" href="#friendrequests"><span class="glyphicon glyphicon-th-list"></span> FRIEND REQUESTS</a></li>
+                            <li><a data-toggle="tab" href="#removefriend"><span class="glyphicon glyphicon-th-list"></span> REMOVE FRIEND</a></li>
+						</ul>
+						<!--Tab content-->
+						<div class="tab-content">
+							<div id="friends" class="tab-pane fade in active">
+                                  
+                                 
+                                
+
+                                
+                                 
+								<div class="table-responsive">
+									<table class="table table-hover" id="payment_tab" >
+									<thead>
+										<tr>
+                                            <th> Name </th>
+                                            <th> Email </th>
+                                            <th> pic   </th>
+                                         </tr>
+									</thead>
+									<tbody id="friendlistbody">
+                                        {% for g in frienddictionary %}
+                                            <tr>>
+                                            <td> {{g.name}} </td>
+                                             <td> {{g.email}} </td>
+                                             <td>   
+                                                 
+                                                 <ul class="enlarge">
+                                                    <li>
+                                                    <img src="https://clique.blob.core.windows.net/new-public-container/{{ g.pic }}"  width="50px" height="50px" alt="Deckchairs" />
+                                                    <span> <!--span contains the popup image-->
+                                                    <img src="https://clique.blob.core.windows.net/new-public-container/{{ g.pic }}"  alt="Deckchairs" /> <!--popup image-->
+                                                    <br />Deckchairs on Blackpool beach <!--caption appears under the popup image-->
+                                                    </span>
+                                                </li>
+                                                </ul> 
+                                        
+                                            </td> 
+                                            </tr>                                   
+                                        {% endfor %}
+                                        
+									</tbody>
+									
+									</table>
+								</div>
+							   <li><a href="{% url 'refreshpage' %}">Refresh</a></li>
+						 </div>
+							
+							<!--Friend requests history-->
+							<div id="friendrequests" class="tab-pane fade">
+								<div class="table-responsive">
+									<table class="table table-hover" id="treatment_tab">
+										<br />
+										<tr id="firstrow2">
+										            <!--<th>#</th>  -->
+										<th> Request from Email</th>
+										                <!--<th>Name</th> -->
+										</tr>
+                                        {% for g in list_reqfromemail %}
+                                            <tr>
+                                               <td> <a href="{{g}}">{{ g }} </a></td>
+                                                
+                                            </tr>
+                                        {% endfor %}
+
+									</table>
+								</div>	
+							</div>
+						    <div id="removefriend" class="tab-pane fade">
+                                remove friend 
+                                <ul class="enlarge">
+                                    <li>
+                                    <img src="https://clique.blob.core.windows.net/new-public-container/{{ profilepic }}"  width="150px" height="100px" alt="Deckchairs" />
+                                    <span> <!--span contains the popup image-->
+                                        <img src="https://clique.blob.core.windows.net/new-public-container/{{ profilepic }}"  alt="Deckchairs" /> <!--popup image-->
+                                        <br />Deckchairs on Blackpool beach <!--caption appears under the popup image-->
+                                    </span>
+                                    </li>
+                                </ul>
+
+
+                                <div style="width: 680px; color: blue; background-color: green; border: 2px groove blue; padding: 5px;">
+                                     Ankur uploaded 
+                                   <p>{% if profilepic %}
+                                       <!-- <p><img src="/assets/{{ profilepic }}" width="800"  /></p> -->
+                                        <p>
+                                            <a href="https://clique.blob.core.windows.net/new-public-container/{{ profilepic }}" >
+                                                <img src="https://clique.blob.core.windows.net/new-public-container/{{ profilepic }}" width="50"  />
+                                            </a>
+                                        </p>
+                                      {% endif %}
+                                      <img src="{% static 'static/images/like.png' %}" height="40px" width="40px" />
+                                      24
+                                  </p> 
+                                </div>
+
+                                
+                                <form class="form-signin" action="{% url 'uploadpic' %}" method="post" enctype="multipart/form-data">
+          
+                                    {% csrf_token %}
+        
+                                    <h2 class="form-signin-heading">upload</h2>
+        
+                                    <label for="inputEmail" class="sr-only">Email address</label>
+                                    <input type="email" id="inputemail" name="inputemail" class="form-control" placeholder="Email address" required autofocus>
+                                    
+                                    <label for="inputabout" class="sr-only">ABOUT YOURSELF</label>
+                                    <input type="text" id="inputabout" name="inputabout" class="form-control" placeholder="About" required autofocus />
+
+                                 <label for="inputfile" class="sr-only">Select</label>
+                                <input type="file" id="inputfile" name="inputfile" class="form-control" placeholder="file" required>
+        
+                                <button class="btn btn-lg btn-primary btn-block" type="submit">upload</button>
+                                </form>
+                            </div>
+                        </div>   <!-- end of tab content-->
+					</div>      <!--end of clique-->
+					<!--   @search-->
+					<div id="searchfriend" class="tab-pane fade">
+						<h1 class="sub-header" >SEARCH FRIEND</h1>
+						<br />
+
+                         <form  action="{% url 'search' %}" method="post" enctype="multipart/form-data">
+                         {% csrf_token %}
+						<label>Search: <input type="search" id="search_account" name="searchname" class="form-control" placeholder="Name"></input></label>
+						<input type="submit" name="submit" class="btn btn-lg btn-primary" value="Go" onclick="display_patient()"></input><br><br>
+						</form>
+                        
+                        <div class="table-responsive">
+							<table class="table table-striped">
+								<thead>
+									<tr>
+									
+									<th>Name</th>
+									<th>email</th>
+									<th>Send friend request</th>
+									</tr>
+								</thead>
+
+                                <tbody id="patient_list_body">
+                                {% if searchresults %}
+
+                                    {% for g in searchresults %}
+                                    <tr>
+                                        <td> {{ g.name }}</td>
+                                        <td> {{ g.email }}</td>
+                                        <td> <a href="...{{ g.email }}">SEND FRIEND REQUESTS </a> </td>
+                                    </tr>
+                                    {% endfor %}
+								{% endif %}
+								</tbody>
+							</table>
+						</div>
+					</div>
+						
+					<!-- @ view subsscription-->	
+					<div id="subscription" class="tab-pane fade">
+						<h1 class="sub-header" >SUBSCRIPTIONS </h1><br>
+						
+							
+						<div class="table-responsive">
+							<table class="table table-hover" id="prescription_tab">
+								<tr id="firstrow">
+									<th>#</th>
+									<th>Name</th>
+									<th>View</th>
+								</tr>
+							</table>
+						</div>
+					
+					</div>
+                 
+                 <!---   @ uploaded photos -->
+                <div id="uploaded" class="tab-pane fade">
+                    <h1 class="sub-header"> Your uploaded photos</h1>
+                   
+                    {% if uploadedphotos %}
+                         <h3><span class="label label-success">YOUR UPLOAED PHOTOS .U CAN SHARE UNSHARED PHOTOS</span></h3>
+                        {% for i in uploadedphotos %}
+                         <ul class="enlarge">
+                                    <li>
+                                        {{ i.when }}    {{ i.activity }}
+                                    <img src="https://clique.blob.core.windows.net/new-public-container/{{ i.photo }}"  width="150px" height="100px" alt="Deckchairs" />
+                                    <span> <!--span contains the popup image-->
+                                        <img src="https://clique.blob.core.windows.net/new-public-container/{{ i.photo }}" width="800px" alt="Deckchairs" /> <!--popup image-->
+                                        <br /> {{ i.data }} <!--caption appears under the popup image-->
+                                    </span>
+                                    </li>
+                                </ul>   
+
+                        {% endfor %}
+                        list
+                    {% else %}
+                        <h3><span class="label label-success">You havent uploaded any photos !! Start uploading Aand sharing photos </span></h3>
+                    {% endif %}
+				</div>	
+				<!--  @profile-->
+		<div id="Profile" class="tab-pane fade">
+            <h1 class="sub-header" >Manage Profile</h1><br>
+		  <ul class="nav nav-pills">
+        <li class="active"><a data-toggle="tab" href="#profile_content"><span class="glyphicon glyphicon-th-list"></span> Edit Profile</a></li>
+        <li><a data-toggle="tab" href="#change_password"><span class="glyphicon glyphicon-plus"></span>Change Password</a></li>
+        <li><a data-toggle="tab" href="#change_profilepic"><span class="glyphicon glyphicon-plus"></span>Change PROFILE PICTURES</a></li>
+        <li><a data-toggle="tab" href="#uploadphotos"><span class="glyphicon glyphicon-plus"></span>UPLOAD PHOTOS</a></li>
+        
+    </ul>
+	<div class="tab-content">
+        <div id="profile_content" class="tab-pane fade in active">
+          <h2>Update Profile</h2>
+           <form role="form">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" class="form-control" id="name" value="{{ name }}">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" class="form-control" id="email" value="{{ email }}" readonly>
+                </div>
+	            <div class="form-group">
+                    <label for="address">Address:</label>
+                    <input type="text" class="form-control" id="address" value="Bangalore">
+                </div>
+	            <div class="form-group">
+                    <label for="phone">Phone No:</label>
+                    <input type="text" class="form-control" id="phone" value="9931918539">
+                </div>
+                <button type="submit" class="btn btn-default">Update Profile</button>
+            </form>
+            
+        </div>
+        <!-- 2nd tab -->
+        <div id="change_password" class="tab-pane fade">
+		  <form class="form-signin" method="POST"  action="Doctor.html">
+            <h2 class="form-signin-heading">Change password</h2>
+			<input type="password"  class="form-control" placeholder="old password" >
+            <input type="password"  class="form-control" placeholder="new password" >
+            <input type="password"  class="form-control" placeholder="retype password" >
+            <br>
+		    <input type="submit" class="btn btn-lg btn-primary btn-block" value="Submit" ></input>
+        </form>
+       </div>
+
+            <!-- 3rd tab content -->
+            <div id="change_profilepic" class="tab-pane fade">			
+		    <h3><span class="label label-success">UPDATE YOUR PROFILE PIC.</span></h3>
+                <form class="form-signin" action="{% url 'uploadpic' %}" method="post" enctype="multipart/form-data">
+                 {% csrf_token %}
+                <h2 class="form-signin-heading">upload</h2>
+                <label for="inputEmail" class="sr-only">Email address</label>
+                <input type="email" id="inputemail" name="inputemail" class="form-control" placeholder="Email address" value="{{ email }}" required autofocus>
+                                    
+                <label for="inputabout" class="sr-only">ABOUT YOURSELF</label>
+                <input type="text" id="inputabout" name="inputabout" class="form-control" placeholder="About" required autofocus />
+
+                <label for="inputfile" class="sr-only">Select</label>
+                <input type="file" id="inputfile" name="inputfile" class="form-control" placeholder="file" required>
+        
+                <button class="btn btn-lg btn-primary btn-block" type="submit">UPDATE</button>
+                </form>			
+		    
+        </div>
+            <div id="uploadphotos" class="tab-pane fade">			
+		    <h3><span class="label label-success"> UPLOAD YOUR ACTIONS !!</span></h3>
+                <form class="form-signin" action="{% url 'uploadactivity' %}" method="post" enctype="multipart/form-data">
+                 {% csrf_token %}
+                 <h2 class="form-signin-heading">upload</h2>
+                <select id="activity" name ="activity" class="form-control" placeholder=".col-lg-4">
+						<option value="uploaded"> UPLOAD </option>
+						<option value="uploaded and shared">UPLOAD AND SHARE</option>
+						
+				</select>
+                 
+                <label for="picdata" class="sr-only">ABOUT THE PHOTO</label>
+                <input type="text" id="picdata" name="picdata" class="form-control" placeholder="About" required autofocus />
+
+                <label for="inputfile" class="sr-only">Select</label>
+                <input type="file" id="inputfile" name="inputfile" class="form-control" placeholder="file" required />
+                <button class="btn btn-lg btn-primary btn-block" type="submit">UPLOAD</button>
+                </form>
+            
+            </div>
+        
+        </div>  <!-- end of tab content -->
+		
+        </div> <!-- end of update profile section -->
+		 
+				</div>   <!-- end of class tab-content-->
+		
+			</div> 
+        </div>   <!-- end of right side of page size 9 waala -->
+	</div>     <!-- end of row -->
+    		<!-- end of container  -->
+		<!-- end of container fluid -->
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="jquery-1.11.2.min.js"></script>
+	<script src="dist/js/bootstrap.min.js"></script>
+    <script src="assets/js/docs.min.js"></script>
+    <script src="assets/js/ie10-viewport-bug-workaround.js"></script>
+	
+  </body>
+ </html>

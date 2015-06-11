@@ -1,0 +1,10 @@
+warnings
+Library
+defaulttags
+RemovedInDjango19Warning
+RemovedInDjango20Warning
+register
+firstof
+cycle
+ssi
+url

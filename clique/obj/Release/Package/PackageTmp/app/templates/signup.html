@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <h3> this is the signup page</h3>
+    <form id="signupform" action="{% url 'verifysignupurl' %}" method="POST" >
+			{% csrf_token %}
+			Name: <input type="text" id="name" name="name"/><br />
+			Email: <input type="text" id="email" name="email"/><br />
+			Password: <input type="password" id="password" name="password"/><br>
+			BirthDay  (eg.28):<input type="number" id="bd" name="bd" /><br />
+            BirthMonth (eg:12):<input type="number" id="bm" name="bm" /><br />
+            
+            BirthYear (eg:1994):<input type="number" id="by" name="by" /><br />			
+			<input type="submit" value="submit" name="submit"><br />
+		</form>	
+
+</body>
+</html>
