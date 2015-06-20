@@ -16,7 +16,7 @@ def friend_email_get(mine):
     l=[]
     try:
         # will return a list of email ids of freinds
-        table_service = TableService(account_name='clique', account_key='zMSzhIxowjBuMvLo24CUcIA1r5EaMaLgYPvblm6JxS4EkHZEFbMXuwv2XWirMppLA9Hb8m3mx92Zg0pNxICzYw==')
+        table_service = TableService(account_name='****', account_key='******')
         #since table is already created
         #table_service.create_table('friendstable')
         tuple1 = table_service.get_entity('friendlisttable', 'friend', mine)
@@ -36,7 +36,7 @@ def friend_email_get(mine):
 def friend_email_add(mine,friend):
     #SEE if my tuple is there .. is not then create and add else simple merge
     print("\n\n\n\n\ running addin table ")
-    table_service = TableService(account_name='clique', account_key='zMSzhIxowjBuMvLo24CUcIA1r5EaMaLgYPvblm6JxS4EkHZEFbMXuwv2XWirMppLA9Hb8m3mx92Zg0pNxICzYw==')
+    table_service = TableService(account_name='*****', account_key='******')
     try:
         task = table_service.get_entity('friendlisttable', 'friend', mine)
         count=task.count
